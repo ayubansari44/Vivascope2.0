@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+
+.pointer{
+    cursor: pointer;
+}
+.navbar .navbar-expand-md .navbar-dark {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20%;
+
+}
+
+.logo img{
+    width: 33%;
+    border: 3px solid white;
+    border-radius: 50px;
+    left: 20%;
+}
+
+.text-footer{
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+
+}
+
+footer{
+    background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+.master {
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+}
+
+.main-section {
+
+  text-align: center;
+  padding-top: 35vh;
+  color: black;
+}
+
+.navbar {
+  height: 20vh;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 25% 75%;
+
+  background-color: #153e90;
+}
+
+.navbar-brand {
+  font-size: 26px;
+}
+
+.column-1 {
+  padding-left: 2vw;
+  display: grid;
+  grid-template-rows: 35% 65%;
+  height: 100%;
+  border-right: 1px solid #fff;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.brand-name {
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.left-topcontrol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  display: grid;
+  grid-template-columns: 50% 40%;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btn1 {
+  border: 0.8px solid rgb(174, 177, 201);
+
+  background: none;
+  padding: 3px 45px;
+  color: #fff;
+}
+
+.btn2 {
+  border: 0.8px solid rgb(174, 177, 201);
+  padding-top: 50px;
+  background: none;
+  padding: 3px 45px;
+  color: #fff;
+}
+
+.column-2 {
+  padding-left: 2vw;
+  display: grid;
+  grid-template-rows: 20% 45% 30%;
+
+  width: 100%;
+  height: 100%;
+}
+
+.col2-top-sec {
+  margin-top: 0.25rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+  justify-content: flex-end;
+  padding-right: 2vh;
+}
+
+.col2-bot-sec {
+  display: grid;
+  width: 100%;
+  height: 90%;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5vw;
+}
+
+.left-section {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.right-section {
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  width: 90%;
+  padding-right: 2vw;
+}
+
+.col2-mid-sec {
+  display: grid;
+  width: 100%;
+  height: 90%;
+}
+
+.progressbar {
+  counter-reset: step;
+  font-size: 12px;
+  height: fit-content;
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.progressbar li {
+  list-style-type: none;
+  float: left;
+  width: 10%;
+  position: relative;
+  text-align: center;
+}
+
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #dddd;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #dddd;
+  top: 10px;
+  left: -50%;
+}
+
+.progressbar li:first-child::after {
+  content: none;
+}
+
+.progressbar li.active {
+  color: green;
+}
+
+.progressbar li.active:before {
+  border-color: green;
+}
+
+.progressbar li.active + li:after {
+  background-color: green;
+}
+
+.left-buttons {
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-buttons ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.left-buttons ul li {
+  list-style: none;
+  margin: 0 25px;
+}
+
+.left-buttons ul li .fa {
+  font-size: 30px;
+  line-height: 30px;
+  transition: 0.6s;
+  color: white;
+}
+
+.left-buttons ul li .fa:hover {
+  color: #fff;
+}
+
+.left-buttons ul li a {
+  padding-top: 10px;
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-color: rgb(174, 177, 201);
+  text-align: center;
+  transition: 0.6s;
+  border: 0.8px solid rgb(174, 177, 201);
+}
+
+.left-buttons ul li a:hover {
+  transform: translate(0, -5px);
+}
+
+.top-left-control {
+  padding: 0;
+  margin: 0;
+}
+
+.text-footer {
+  text-align: center;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+footer {
+  background: #153e90;
+} */

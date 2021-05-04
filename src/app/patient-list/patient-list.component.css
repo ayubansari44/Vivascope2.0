@@ -1,0 +1,15 @@
+.navbar {
+  height:100%;
+  width: 100%;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 25% 75%;
+
+  /* background-color: #153e90; */
+  background-color: #0061a8;
+  /* width: 100vh; */
+}
+
+mat-dialog-title{
+  background-color: aqua;
+}
