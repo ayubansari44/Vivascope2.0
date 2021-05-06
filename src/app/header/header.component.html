@@ -12,6 +12,7 @@
 
         <div class="left-buttons">
           <button
+            class="add-btn"
             style="
               border: none;
               outline: 1px solid #fff;
@@ -24,6 +25,7 @@
           </button>
 
           <button
+            class="search-btn"
             style="
               border: none;
               outline: 1px solid #fff;
@@ -58,13 +60,23 @@
 </div> -->
 
       <li>
-        <a class="btn dropdown-toggle href=#"
+        <a class="btn btns dropdown-toggle href=#"
           ><i class="fas fa-cog" style="color: #fff"></i
         ></a>
       </li>
+
       <li>
-        <div class="dropdown">
-          <button
+        <!-- <div class="dropdown"> -->
+          <div class="dropdown">
+            <i class="fas fa-user" style="color: #fff"></i>
+            <button class="dropbtn">ayub</button>
+            <div class="dropdown-content">
+              <a href="" (click)="logout()">Logout</a>
+              <a href="">Help</a>
+              <a href="">Edit</a>
+            </div>
+          </div>
+          <!-- <button
             type="button"
             class="btn dropdown-toggle"
             data-toggle="dropdown"
@@ -72,12 +84,13 @@
             <i class="fas fa-user" style="color: #fff"></i>
             user
           </button>
+          
           <div class="dropdown-menu">
-            <button type="button" class="btn dropdown-toggle">
+            <button type="button" class="btn4">
               <a (click)="logout()" class="nav-link">Logout</a>
             </button>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div> -->
       </li>
       <li>
         <div class="box"></div>
@@ -104,12 +117,13 @@
 
         <div class="all-fieldset">
           <fieldset>
+            
             <div
               style="
                 background: #0061a8;
                 display: flex;
                 width: 100%;
-                padding: 0 10px 0 50px;
+                padding: 0 5px 0 40px;
               "
               class="random-buttons"
             >
@@ -127,12 +141,16 @@
                   </li>
                 </ul>
               </div>
+
               <input
-                style="border: 1px solid rgb(174, 177, 201); padding: 4px 8px"
+                style="
+                  border: 1px solid rgb(174, 177, 201);
+                  padding: 2px 80px 0 40px;
+                "
                 type="button"
                 name="next-step"
                 class="next-step"
-                value="START"
+                value="START "
               />
             </div>
 
@@ -170,11 +188,14 @@
                 </ul>
               </div>
               <input
-                style="border: 1px solid rgb(174, 177, 201); padding: 4px 8px"
+                style="
+                  border: 1px solid rgb(174, 177, 201);
+                  padding: 2px 80px 0 40px;
+                "
                 type="button"
                 name="next-step"
                 class="next-step"
-                value="START"
+                value="START "
               />
             </div>
             <i
@@ -209,158 +230,21 @@
                 </ul>
               </div>
               <input
-                style="border: 1px solid rgb(174, 177, 201); padding: 4px 8px"
+                style="
+                  border: 1px solid rgb(174, 177, 201);
+                  padding: 2px 80px 0 40px;
+                "
                 type="button"
                 name="next-step"
                 class="next-step"
-                value="START"
+                value="START "
               />
             </div>
             <i
               style="margin: 10vh 45vh 0 0; color: #0061a8"
               class="fas fa-microscope fa-9x"
             ></i>
-            <h1 style="margin-top: 5vh">Auto Calibration</h1>
-            <div class="load-anim2">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </fieldset>
-          <fieldset>
-            <div
-              style="
-                background: #0061a8;
-                display: flex;
-                width: 100%;
-                padding: 0 10px 0 50px;
-              "
-              class="random-buttons"
-            >
-              <div class="left-section">
-                <p>PID:</p>
-                <span style="width: 50px"></span>
-                <p>TID:</p>
-              </div>
-              <div class="left-buttons">
-                <ul>
-                  <li>
-                    <a href="#"
-                      ><i class="fas fa-pen" style="color: #fff"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-              <input
-                style="border: 1px solid rgb(174, 177, 201); padding: 4px 8px"
-                type="button"
-                name="next-step"
-                class="next-step"
-                value="START"
-              />
-            </div>
-            <i
-              style="margin: 10vh 45vh 0 0; color: #0061a8"
-              class="fas fa-microscope fa-9x"
-            ></i>
-
-            <h1 style="margin-top: 5vh">Auto Region Selection</h1>
-            <div class="load-anim3">
-              <div>loading</div>
-              <div>loading</div>
-              <div>loading</div>
-              <div>loading</div>
-            </div>
-          </fieldset>
-          <fieldset>
-            <div
-              style="
-                background: #0061a8;
-                display: flex;
-                width: 100%;
-                padding: 0 10px 0 50px;
-              "
-              class="random-buttons"
-            >
-              <div class="left-section">
-                <p>PID:</p>
-                <span style="width: 50px"></span>
-                <p>TID:</p>
-              </div>
-              <div class="left-buttons">
-                <ul>
-                  <li>
-                    <a href="#"
-                      ><i class="fas fa-pen" style="color: #fff"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-              <input
-                style="border: 1px solid rgb(174, 177, 201); padding: 4px 8px"
-                type="button"
-                name="next-step"
-                class="next-step"
-                value="START"
-              />
-            </div>
-            <i
-              style="margin: 10vh 45vh 0 0; color: #0061a8"
-              class="fas fa-microscope fa-9x"
-            ></i>
-
-            <h1 style="margin-top: 5vh">Image Capturing</h1>
-            <section>
-              <div class="load-anim4">
-                Loading
-              </div>
-            </section>
-          </fieldset>
-          <fieldset>
-            <div
-              style="
-                background: #0061a8;
-                display: flex;
-                width: 100%;
-                padding: 0 10px 0 50px;
-              "
-              class="random-buttons"
-            >
-              <div class="left-section">
-                <p>PID:</p>
-                <span style="width: 50px"></span>
-                <p>TID:</p>
-              </div>
-              <div class="left-buttons">
-                <ul>
-                  <li>
-                    <a href="#"
-                      ><i class="fas fa-pen" style="color: #fff"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-              <input
-                style="border: 1px solid rgb(174, 177, 201); padding: 4px 8px"
-                type="button"
-                name="next-step"
-                class="next-step"
-                value="START"
-              />
-            </div>
-            <i
-              style="margin: 10vh 45vh 0 0; color: #0061a8"
-              class="fas fa-microscope fa-9x"
-            ></i>
-
-            <h1 style="margin-top: 5vh">WBC Module</h1>
+            <h1 style="margin-top: 5vh">Auto Calibration running</h1>
             <div class="load-anim">
               <div class="dot dot1"></div>
               <div class="dot dot2"></div>
@@ -397,11 +281,14 @@
                 </ul>
               </div>
               <input
-                style="border: 1px solid rgb(174, 177, 201); padding: 4px 8px"
+                style="
+                  border: 1px solid rgb(174, 177, 201);
+                  padding: 2px 80px 0 40px;
+                "
                 type="button"
                 name="next-step"
                 class="next-step"
-                value="START"
+                value="START "
               />
             </div>
             <i
@@ -409,10 +296,17 @@
               class="fas fa-microscope fa-9x"
             ></i>
 
-            <h1 style="margin-top: 5vh">Image Processing</h1>
-            <div class="load-anim4">
-                Loading
-              </div>
+            <h1 style="margin-top: 5vh">Auto Region Selection running</h1>
+            <div class="load-anim">
+              <div class="dot dot1"></div>
+              <div class="dot dot2"></div>
+              <div class="dot dot3"></div>
+              <div class="dot dot4"></div>
+              <div class="dot dot5"></div>
+              <div class="dot dot6"></div>
+              <div class="dot dot7"></div>
+              <div class="dot dot8"></div>
+            </div>
           </fieldset>
           <fieldset>
             <div
@@ -439,11 +333,14 @@
                 </ul>
               </div>
               <input
-                style="border: 1px solid rgb(174, 177, 201); padding: 4px 8px"
+                style="
+                  border: 1px solid rgb(174, 177, 201);
+                  padding: 2px 80px 0 40px;
+                "
                 type="button"
                 name="next-step"
                 class="next-step"
-                value="START"
+                value="START "
               />
             </div>
             <i
@@ -451,10 +348,70 @@
               class="fas fa-microscope fa-9x"
             ></i>
 
-            <h1 style="margin-top: 5vh">Image Analysis</h1>
-            <div class="load-anim4">
-                Loading
+            <h1 style="margin-top: 5vh">Image Capturing running</h1>
+            <div class="load-anim">
+              <div class="dot dot1"></div>
+              <div class="dot dot2"></div>
+              <div class="dot dot3"></div>
+              <div class="dot dot4"></div>
+              <div class="dot dot5"></div>
+              <div class="dot dot6"></div>
+              <div class="dot dot7"></div>
+              <div class="dot dot8"></div>
+            </div>
+          </fieldset>
+          <fieldset>
+
+            <div
+              style="
+                background: #0061a8;
+                display: flex;
+                width: 100%;
+                padding: 0 10px 0 50px;
+              "
+              class="random-buttons"
+            >
+              <div class="left-section">
+                <p>PID:</p>
+                <span style="width: 50px"></span>
+                <p>TID:</p>
               </div>
+              <div class="left-buttons">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fas fa-pen" style="color: #fff"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <input
+                style="
+                  border: 1px solid rgb(174, 177, 201);
+                  padding: 2px 80px 0 40px;
+                "
+                type="button"
+                name="next-step"
+                class="next-step"
+                value="START "
+              />
+            </div>
+            <i
+              style="margin: 10vh 45vh 0 0; color: #0061a8"
+              class="fas fa-microscope fa-9x"
+            ></i>
+
+            <h1 style="margin-top: 5vh">WBC Module running</h1>
+            <div class="load-anim">
+              <div class="dot dot1"></div>
+              <div class="dot dot2"></div>
+              <div class="dot dot3"></div>
+              <div class="dot dot4"></div>
+              <div class="dot dot5"></div>
+              <div class="dot dot6"></div>
+              <div class="dot dot7"></div>
+              <div class="dot dot8"></div>
+            </div>
           </fieldset>
           <fieldset>
             <div
@@ -481,7 +438,114 @@
                 </ul>
               </div>
               <input
-                style="border: 1px solid rgb(174, 177, 201); padding: 4px 8px"
+                style="
+                  border: 1px solid rgb(174, 177, 201);
+                  padding: 2px 80px 0 40px;
+                "
+                type="button"
+                name="next-step"
+                class="next-step"
+                value="START "
+              />
+            </div>
+            <i
+              style="margin: 10vh 45vh 0 0; color: #0061a8"
+              class="fas fa-microscope fa-9x"
+            ></i>
+
+            <h1 style="margin-top: 5vh">Image Processing running</h1>
+            <div class="load-anim">
+              <div class="dot dot1"></div>
+              <div class="dot dot2"></div>
+              <div class="dot dot3"></div>
+              <div class="dot dot4"></div>
+              <div class="dot dot5"></div>
+              <div class="dot dot6"></div>
+              <div class="dot dot7"></div>
+              <div class="dot dot8"></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div
+              style="
+                background: #0061a8;
+                display: flex;
+                width: 100%;
+                padding: 0 10px 0 50px;
+              "
+              class="random-buttons"
+            >
+              <div class="left-section">
+                <p>PID:</p>
+                <span style="width: 50px"></span>
+                <p>TID:</p>
+              </div>
+              <div class="left-buttons">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fas fa-pen" style="color: #fff"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <input
+                style="
+                  border: 1px solid rgb(174, 177, 201);
+                  padding: 2px 80px 0 40px;
+                "
+                type="button"
+                name="next-step"
+                class="next-step"
+                value="START "
+              />
+            </div>
+            <i
+              style="margin: 10vh 45vh 0 0; color: #0061a8"
+              class="fas fa-microscope fa-9x"
+            ></i>
+
+            <h1 style="margin-top: 5vh">Image Analysis running</h1>
+            <div class="load-anim">
+              <div class="dot dot1"></div>
+              <div class="dot dot2"></div>
+              <div class="dot dot3"></div>
+              <div class="dot dot4"></div>
+              <div class="dot dot5"></div>
+              <div class="dot dot6"></div>
+              <div class="dot dot7"></div>
+              <div class="dot dot8"></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div
+              style="
+                background: #0061a8;
+                display: flex;
+                width: 100%;
+                padding: 0 10px 0 50px;
+              "
+              class="random-buttons"
+            >
+              <div class="left-section">
+                <p>PID:</p>
+                <span style="width: 50px"></span>
+                <p>TID:</p>
+              </div>
+              <div class="left-buttons">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fas fa-pen" style="color: #fff"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <input
+                style="
+                  border: 1px solid rgb(174, 177, 201);
+                  padding: 2px 80px 0 40px;
+                "
                 type="button"
                 name="next-step"
                 class="next-step"
@@ -495,16 +559,24 @@
             ></i>
 
             <h1 style="margin-top: 5vh">Report</h1>
-            <div class="load-anim4">
-                Loading
-              </div>
-            l
+            <div class="load-anim">
+              <div class="dot dot1"></div>
+              <div class="dot dot2"></div>
+              <div class="dot dot3"></div>
+              <div class="dot dot4"></div>
+              <div class="dot dot5"></div>
+              <div class="dot dot6"></div>
+              <div class="dot dot7"></div>
+              <div class="dot dot8"></div>
+            </div>
           </fieldset>
         </div>
       </form>
     </div>
   </div>
 </div>
+
+
 
 <jw-modal id="modal1">
   <div>
@@ -528,7 +600,8 @@
 
   <div class="master-p-list">
     <div class="mat-elevation-z0">
-      <table mat-table [dataSource]="dataSource">
+      <table  id="tab"
+          name="tab" mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="pid">
           <th mat-header-cell *matHeaderCellDef>Patient ID</th>
           <td mat-cell *matCellDef="let element">{{ element.pid }}</td>
@@ -569,164 +642,195 @@
 </jw-modal>
 
 <jw-modal id="modal2">
-  <div>
-    <nav class="navbar2">
-      <h6 style="padding: 0.75rem 0 0.25rem 0.5rem">Add New Patient</h6>
-      <button class="close-btn" (click)="modalService.close('modal2')">
-        <i
-          style="margin-right: 1vw; font-size: large"
-          class="far fa-times-circle"
-        ></i>
-      </button>
-    </nav>
-  </div>
-
-  <div class="add-patient">
-    <div class="patient-id">
-      <label style="padding-right: 1vw; color: #fff" for="">Patient ID </label>
-      <input
-        style="
-          background: transparent;
-          outline: none;
-          border: none;
-          border-bottom: 1px solid #fff;
-          color: #fff;
-        "
-        type="text"
-      />
+  <form id="form" action="/" method="GET" class="form11">
+    <div id="error"></div>
+    <div>
+      <nav class="navbar2">
+        <h6 style="padding: 0.75rem 0 0.25rem 0.5rem">Add New Patient</h6>
+        <button class="close-btn" (click)="modalService.close('modal2')">
+          <i
+            style="margin-right: 1vw; font-size: large"
+            class="far fa-times-circle"
+          ></i>
+        </button>
+      </nav>
     </div>
 
-    <div class="patient-id">
-      <label style="padding-right: 1vw; color: #fff" for="">Test ID </label>
-      <input
-        style="
-          background: transparent;
-          outline: none;
-          border: none;
-          border-bottom: 1px solid #fff;
-          color: #fff;
-        "
-        type="text"
-      />
+    <div class="add-patient">
+      <div class="patient-id">
+        <label style="padding-right: 1vw; color: #fff" for=""
+          >Patient ID
+        </label>
+
+        <input
+        ngModel name="fname" #fname="ngModel" (change)="log(fname)"
+          style="
+            background: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+          "
+          id="pid"
+          name="pid"
+          type="text"
+          required
+          pattern=".{3,}"
+          required
+          title="3 characters minimum"
+        />
+      </div>
+      <!-- (keyup)="getVal($event)" -->
+
+      <div class="patient-id">
+        <label style="padding-right: 1vw; color: #fff" for="">Test ID </label>
+        <input
+        ngModel name="lname" #lname="ngModel" (change)="log2(lname)"
+          style="
+            background: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+          "
+          type="text"
+          id="tid"
+          name="tid"
+        />
+      </div>
     </div>
-  </div>
-  <div class="master-p-list">
-    <mat-tab-group class="blood-header" mat-align-tabs="start">
-      <mat-tab class="blood-tab" label="BLOOD" active>
-        <div class="blood-container">
-          <div class="blood-top">
-            <div class="blood-rbc">
-              <input
-                type="checkbox"
-                id="vehicle1"
-                name="vehicle1"
-                value="Bike"
-              />
-              <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle1">
-                RBC Size</label
-              ><br />
-              <input
-                type="checkbox"
-                id="vehicle2"
-                name="vehicle2"
-                value="Car"
-              />
-              <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle2">
-                RBC Count</label
-              ><br />
-              <input
-                type="checkbox"
-                id="vehicle3"
-                name="vehicle3"
-                value="Boat"
-              />
-              <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle3">
-                RBC Texture</label
-              ><br />
-              <input
-                type="checkbox"
-                id="vehicle1"
-                name="vehicle1"
-                value="Bike"
-              />
-              <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle1">
-                RBC Shape</label
-              ><br />
-              <input
-                type="checkbox"
-                id="vehicle2"
-                name="vehicle2"
-                value="Car"
-              />
-              <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle2">
-                RBC Paller</label
-              ><br />
+
+    <div class="master-p-list">
+<ul class="nav nav-tabs" style="color: #fff;
+background-color: #0061a8;
+">
+  <li class="nav-item">
+    <a style="background: #0061a8; color: #fff;
+    border: 1px solid #0061a8;
+    border-bottom: 8px solid #fff;
+    
+    margin-left: 10px;
+    font-size: medium;
+    font-weight:normal;" class="nav-link active" aria-current="page" href="">BLOOD</a>
+  </li>
+  
+    </ul>
+  
+      <div class="blood-container">
+            <div class="blood-top">
+              <div class="blood-rbc">
+                <input
+                  type="checkbox"
+                  id="vehicle1"
+                  name="vehicle1"
+                  value="Bike"
+                />
+                <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle1">
+                  RBC Size</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="vehicle2"
+                  name="vehicle2"
+                  value="Car"
+                />
+                <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle2">
+                  RBC Count</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="vehicle3"
+                  name="vehicle3"
+                  value="Boat"
+                />
+                <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle3">
+                  RBC Texture</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="vehicle1"
+                  name="vehicle1"
+                  value="Bike"
+                />
+                <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle1">
+                  RBC Shape</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="vehicle2"
+                  name="vehicle2"
+                  value="Car"
+                />
+                <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle2">
+                  RBC Paller</label
+                ><br />
+              </div>
+              <div class="blood-wbc">
+                <input
+                  type="checkbox"
+                  id="vehicle1"
+                  name="vehicle1"
+                  value="Bike"
+                />
+                <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle1">
+                  RBC Size</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="vehicle2"
+                  name="vehicle2"
+                  value="Car"
+                />
+                <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle2">
+                  RBC Count</label
+                ><br />
+              </div>
+              <div class="blood-platelets">
+                <input
+                  type="checkbox"
+                  id="vehicle1"
+                  name="vehicle1"
+                  value="Bike"
+                />
+                <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle1">
+                  RBC Size</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="vehicle2"
+                  name="vehicle2"
+                  value="Car"
+                />
+                <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle2">
+                  RBC Count</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="vehicle3"
+                  name="vehicle3"
+                  value="Boat"
+                />
+                <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle3">
+                  RBC Texture</label
+                ><br />
+              </div>
             </div>
-            <div class="blood-wbc">
-              <input
-                type="checkbox"
-                id="vehicle1"
-                name="vehicle1"
-                value="Bike"
-              />
-              <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle1">
-                RBC Size</label
-              ><br />
-              <input
-                type="checkbox"
-                id="vehicle2"
-                name="vehicle2"
-                value="Car"
-              />
-              <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle2">
-                RBC Count</label
-              ><br />
-            </div>
-            <div class="blood-platelets">
-              <input
-                type="checkbox"
-                id="vehicle1"
-                name="vehicle1"
-                value="Bike"
-              />
-              <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle1">
-                RBC Size</label
-              ><br />
-              <input
-                type="checkbox"
-                id="vehicle2"
-                name="vehicle2"
-                value="Car"
-              />
-              <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle2">
-                RBC Count</label
-              ><br />
-              <input
-                type="checkbox"
-                id="vehicle3"
-                name="vehicle3"
-                value="Boat"
-              />
-              <label style="margin: 1rem 0 0.5rem 1rem" for="vehicle3">
-                RBC Texture</label
-              ><br />
+
+            <div class="blood-control">
+              <button type="submit" class="blood-save-btn" (click)="openDial()">
+                <strong> SAVE </strong>
+              </button>
+              <button class="blood-cancel-btn">
+                <strong> CANCEL </strong>
+              </button>
             </div>
           </div>
 
-          <div class="blood-control">
-            <button class="blood-save-btn">
-              <strong> SAVE </strong>
-            </button>
-            <button class="blood-cancel-btn">
-              <strong> CANCEL </strong>
-            </button>
-          </div>
-        </div>
-      </mat-tab>
-    </mat-tab-group>
-  </div>
+
+    </div>
+  </form>
 </jw-modal>
 
-<footer class="special-color-dark">
+<footer class="special-color-dark foot1" >
   <p class="text-footer">Copyright &copy; 2021 - All rights reserved</p>
 </footer>

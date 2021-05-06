@@ -1,15 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+.cover1{
+ background-image: url(../../assets/login-back1.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    border: 8px solid #000;
+}
+
+.logo-rb{
+    margin-left: 37px;
+    margin-right: 700px;
+    /* background-color: crimson; */
+    background-image: url(../../assets/rblogo3.jpeg);
+    width: 250px;
+    height:100px;
+    /* width: 20%;
+    height:18%; */
+}
+
+.machine{
+    margin-left: 177px;
+    margin-top: 105px;
+    background-color: #eeeeee;
+    background-image: url(../../assets/patho.jpeg);
+    width: 460px;
+    height: 310px;
+
+    /* background: transparent; */
+}
+
+.login-wrapper{
+    margin-top: -330px;
+    margin-left: 450px;
+    margin-right: 30px;
+    /* margin-bottom: 100px; */
+    
+   
+}
 
 .login-wrapper{
    
-   margin: 10rem auto;
-    width: 25rem;
+   /* margin-top: 10px; */
+   /* margin-right: 900px; */
+   
+    width: 30rem;
+    color: #0061a8;
+   
     
+}
+
+
+.title1 h1{
+    
+    /* font-family: 'Noto Sans JP', sans-serif; */
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.title1{
+    justify-content: center;
+    text-align: center;
 }
 
 input{
     margin-bottom: 2rem;
+}
+
+input::-webkit-input-placeholder {
+    margin-left: 35px;
+    font-size: 13px;
+    line-height: 3;
+    color: #0061a8;
+    font-weight: bold;
 }
 
 button{
@@ -17,24 +82,37 @@ button{
 }
 
 
-.bg{
-    /* background: rgb(223, 210, 210); */
-    background: #c7d8e4;
-    /* width: 100%;
-    height: 40vh; */
-
+.email-tab{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 45px;
 }
 
-.bg2{
-    background-image: url(../../assets/back55.jpg);
+.pass-tab{
+    
+    margin-left: 15px;
+    margin-bottom: 50px;
+}
+
+.login-btn{
+    margin-left: 15px;
+    padding: 9px 180px;
+}
+
+.bg{
+    background: #ececec;
+    outline: none;
+    border: none;
+}
+
+/* .bg2{
+    background-image: url(../../assets/back4.jpg);
     background-size: cover;
  
     width: 100%;
     height: 100vh;
 
-}
-
-
+} */
 
 .mb-4{
   align-items: center;
@@ -46,4 +124,8 @@ h1{
 
 label{
     font-family: 'Roboto', sans-serif;
+}
+
+.email1{
+    color: brown;
 }

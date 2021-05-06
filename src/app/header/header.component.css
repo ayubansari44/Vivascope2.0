@@ -19,6 +19,7 @@
   padding: 0;
   display: grid;
   grid-template-columns: 380px 1fr;
+  
 
   /* background-color: #153e90; */
   background-color: #0061a8;
@@ -94,6 +95,9 @@
   padding: 5px 8px;
   color: #fff;
 }
+.btns{
+  margin-top: 3px;
+}
 ul li a {
   size: 10%;
 }
@@ -110,6 +114,17 @@ ul li a {
   /* padding-bottom: 10px; */
 }
 
+.btn3{
+  padding: 2px 2px;
+}
+
+.dropdown-menu{
+  color: #000;
+  background: #fff;
+}
+
+
+
 .dropdown-toggle {
   color: #fff;
 }
@@ -120,12 +135,12 @@ ul li a {
   grid-template-rows: 8% 1fr;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 102%;
   border-left: 1px solid #fff;
 }
 
 .col2-top-sec {
-  margin-top: 0.25rem;
+  margin-top: 0.30rem;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 0.5rem;
@@ -143,8 +158,27 @@ ul li a {
   overflow: hidden;
 }
 
+input { 
+    text-align: center; 
+    
+}
+
+input[type="button"]:hover{
+		border:1px solid red;
+		background-color:green;
+	}
+
+
+/* .random-buttons input:hover{
+  transform: translate(0, -1px);
+  color: rgb(14, 219, 14);
+  background-color: #fff;
+  background: yellow;
+ 
+  
+} */
 .box {
-  margin: 1vh 0.5vh 0 0;
+  margin: 1.5vh 0.5vh 0 0;
   /* padding: 20px 10px 10px 10px; */
   width: 40px;
   height: 20px;
@@ -194,10 +228,12 @@ ul li a {
   font-size: 12px;
   height: fit-content;
   font-family: "Roboto", sans-serif;
+ 
 }
 
 li {
   list-style-type: none;
+  left: -0%;
 }
 
 .progressbar li {
@@ -206,6 +242,7 @@ li {
   width: 8%;
   position: relative;
   text-align: center;
+  
 }
 
 .progressbar li:before {
@@ -223,17 +260,20 @@ li {
 }
 
 .progressbar li:after {
+  
   content: "";
   position: absolute;
   width: 100%;
   height: 3px;
   background-color: #fff;
   top: 10px;
-  left: -50%;
+  left: -40%;
+  /* margin-right: 80px; */
 }
 
 .progressbar li:first-child::after {
   content: none;
+  
 }
 
 .progressbar li.active {
@@ -249,10 +289,12 @@ li {
 }
 
 .progress-list {
+ 
   /* margin-bottom: 1vh; */
-  padding-bottom: 15px;
+  padding-bottom: 21px;
   position: relative;
   top: 10px;
+  /* margin-right: 100px; */
 }
 /* new code testing */
 
@@ -328,7 +370,7 @@ li {
   height: 100%;
   width: 50%;
   /* padding: 2vh 30vw; */
-  margin: 2vh 23vw;
+  margin: 2vh 16vw;
 }
 
 .load-anim {
@@ -485,7 +527,7 @@ section .load-anim4 span::before{
   height: 15px;
   background: #00ff0a;
 } */
-
+/* 
 .load-anim4 {
 
   margin-left: -170px;
@@ -532,7 +574,7 @@ section .load-anim4 span::before{
   100%{
     transform: rotate(360deg);
   }
-}
+} */
 
 
 
@@ -576,19 +618,39 @@ fieldset h1 {
   background: #fff;
 }
 
+button.checkout
+{
+  background-color:blue;
+}
+
+input .next-step:hover
+{
+  
+
+ background-color:#fff;
+ transform: translate(0, -1px);
+}
+
+
 #form .previous-step,
 .next-step {
   width: 100px;
   font-weight: bold;
   color: white;
+  
   border: 0 none;
   border-radius: 0px;
   cursor: pointer;
-  padding: 10px 5px;
+  padding: 20px 5px;
   margin: 10px 95px 10px 0px;
-
-  /* float: right; */
 }
+
+.all-fieldset .next-step :hover{
+  transform: translate(0, -1px);
+  color: #0061a8;
+  background: #fff;
+}
+
 
 .form,
 .previous-step {
@@ -607,7 +669,8 @@ fieldset h1 {
 
 #form .next-step:hover,
 #form .next-step:focus {
-  background-color: #0061a8;
+  color: #0061a8;
+  background-color: #fff;
 }
 
 .text {
@@ -622,10 +685,12 @@ fieldset h1 {
   /* font color of bar */
   color: lightgrey;
   counter-reset: step;
+  
 }
 
 #progressbar .active {
   color: #fff;
+  
 }
 
 #progressbar li {
@@ -635,18 +700,23 @@ fieldset h1 {
   float: left;
   position: relative;
   font-weight: 400;
+  
 }
 
 #progressbar #step1:before {
   content: "";
+  
+  
 }
 
 #progressbar #step2:before {
   content: "";
+  
 }
 
 #progressbar #step3:before {
   content: "";
+  
 }
 
 #progressbar #step4:before {
@@ -675,6 +745,8 @@ fieldset h1 {
 
 #progressbar #step9:before {
   content: "";
+
+  
 }
 
 #progressbar li:before {
@@ -688,6 +760,10 @@ fieldset h1 {
   border-radius: 50%;
   margin: 0 auto 0 auto;
   padding: 2px;
+  
+  
+  
+  /* margin-right: 110px; */
 }
 
 #progressbar li:after {
@@ -699,39 +775,55 @@ fieldset h1 {
   left: 0;
   top: 12px;
   z-index: 1;
+  float: left;
 }
 
 #progressbar li.active:before {
+  
+  /* background: green; */
   background: rgb(241, 241, 13);
+  left: -80%;
+  right: -60%;
+}
+
+#progressbar #step9:after {
+  background:#0061a8;
+  content: "";
+  left: 60%;
+  display: none;
+  
+  
+}
+
+#progressbar li:after{
+  top: 30%;
+  left: 41%;
+  right: 40%;
+  height: 3px;
+  /* background: hotpink; */
 }
 
 #progressbar li.active:after {
+ 
+  /* background: green; */
+  /* height: 5px;
+   */
   background: rgb(241, 241, 13);
+  
+  /* left: 60%; */
 }
 
 #progressbar li.prev:after {
   background: rgb(12, 236, 12);
+   /* left: 41%; */
+ 
+   
 }
 
 #progressbar li.prev:before {
   background: rgb(12, 236, 12);
 }
 
-/* .progress {
-  height: 10px;
-
-} */
-
-/* 
-.progress-bar {
-  background: rgb(12, 236, 12);
-  color: rgb(12, 236, 12);
-  
-} */
-
-/* new code testing */
-
-/* Testing of slider */
 
 .left-buttons {
   width: 100%;
@@ -762,6 +854,7 @@ fieldset h1 {
 }
 
 .left-buttons ul li .fa:hover {
+  /* color: #000; */
   color: #fff;
 }
 
@@ -780,6 +873,23 @@ fieldset h1 {
 
 .left-buttons ul li a:hover {
   transform: translate(0, -5px);
+}
+
+.left-topcontrol .btn1:hover{
+  transform: translate(0, -1px);
+  color: #0061a8;
+  background: #fff;
+}
+
+.left-topcontrol .left-buttons .search-btn:hover{
+  transform: translate(0, -1px);
+  color: #0061a8;
+  background-color: #fff;
+ 
+}
+.left-buttons .add-btn:hover{
+  transform: translate(0, -1px);
+ 
 }
 
 /* top-left-control */
@@ -827,42 +937,6 @@ footer {
   /* width: 100vh; */
 }
 
-/* .search-box {
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #2f3640;
-  height: 40px;
-  border-radius: 40px;
-  padding: 10px;
-}
-
-.search-btn {
-  color: #e84118;
-  float: right;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #2f3640;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-txt {
-  border: none;
-  background: none;
-  outline: none;
-  float: left;
-  padding: 0;
-  color: white;
-  font-size: 16px;
-  transition: 0.4s;
-  line-height: 40px;
-  width: 240px;
-} */
 
 .navbar1 {
   color: white;
@@ -938,12 +1012,20 @@ td {
   color: #fff;
 }
 
+.form11{
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+
+}
+
 .navbar2 {
   color: white;
   background-color: #0061a8;
   display: flex;
   align-items: center;
   justify-content: space-between;
+ 
   /* border: #fff; */
   border-bottom: 1px solid #fff;
 }
@@ -1035,6 +1117,18 @@ td {
   margin-right: 8px;
 }
 
+.blood-save-btn:hover{
+  transform: translate(0, -1px);
+  background: #0061a8;
+  color: #fff;
+}
+.blood-cancel-btn:hover{
+  transform: translate(0, -1px);
+  background: #0061a8;
+  color: #fff;
+}
+
+
 .blood-cancel-btn {
   width: 8vw;
   background: transparent;
@@ -1064,3 +1158,51 @@ td {
   outline: none;
   border: none;
 }
+
+
+
+/* akdsfljasklfjasdklfjaksl;dfjklasjdfklasjdfasdlf */
+.dropbtn {
+  background-color: #0061a8;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0061a8;
+  /* border: 1px solid #fff; */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  
+  color: #fff;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+  border: 1px solid #fff;
+}
+
+.dropdown-content a:hover {background-color: rgb(175, 171, 171);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {
+  color: #0061a8;
+  background-color: #fff;
+}
+
+/* .foot1{
+  height: 7vh;
+} */

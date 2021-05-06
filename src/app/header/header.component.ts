@@ -1,13 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
-import { PatientListComponent } from '../patient-list/patient-list.component';
-import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import { ModalService } from '../_modal'; 
+import { MatDialog } from '@angular/material/dialog';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalService } from '../_modal';
 import { AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import * as $ from 'jquery';
 import { AuthenticationService } from '../service/authentication/authentication.service';
+import { Dialog1Component } from '../dialog1/dialog1.component';
+import { Dialog2Component } from '../dialog2/dialog2.component';
+
 
 @Component({
   selector: 'app-header',
@@ -27,8 +29,46 @@ export class HeaderComponent implements AfterViewInit {
 
   constructor(
     public modalService: ModalService,
-    public authenticationService: AuthenticationService
+    public authenticationService: AuthenticationService,
+    public dialog: MatDialog,
+    public dialog2: MatDialog
   ) {}
+
+  log(fname) {
+    console.log(fname.value);
+    // if (fname.value === "null" ) {
+    //   this.openDial2();
+    // }
+    if (fname.value.length <= 10) {
+      this.openDial();
+    }
+  }
+  log2(lname) {
+    console.log(lname.value);
+    // if (fname.value === "null" ) {
+    //   this.openDial2();
+    // }
+    if (lname.value.length <= 10) {
+      this.openDial2();
+    }
+  }
+
+  openDial2() {
+    this.dialog.open(Dialog2Component);
+    // this.dialog.open(Dialog2Component);
+  }
+
+  getVal2(item) {
+    if (item.target.value.length >= 10) {
+      this.openDial2();
+    }
+  }
+
+  getVal(item) {
+    if (item.target.value.length >= 10) {
+      this.openDial2();
+    }
+  }
 
   logout() {
     this.authenticationService.logout();
@@ -36,7 +76,43 @@ export class HeaderComponent implements AfterViewInit {
 
   @Input() deviceMd: boolean;
 
+  pid = <HTMLInputElement>document.getElementById('pid');
+  pid2: any = <HTMLInputElement>document.getElementById('pid');
+  tid = <HTMLInputElement>document.getElementById('tid');
+  form = <HTMLInputElement>document.getElementById('form');
+  errorElement = <HTMLInputElement>document.getElementById('error');
+
+  openDial() {
+    this.dialog.open(Dialog1Component);
+  }
+
   ngOnInit() {
+    const table = document.getElementById('tab') as HTMLTableElement;
+    const pid = <HTMLInputElement>document.getElementById('pid');
+    const pid2: any = <HTMLInputElement>document.getElementById('pid');
+    const tid = <HTMLInputElement>document.getElementById('tid');
+    const form = <HTMLInputElement>document.getElementById('form');
+    const errorElement = <HTMLInputElement>document.getElementById('error');
+
+     console.log(table);
+    // function checkval() { }
+    //const totalRowCount = table.rows.length;
+
+    form.addEventListener('submit', (e) => {
+      let messages = [];
+      if (pid.value === '' || pid.value === null) {
+        messages.push('PID is required');
+      }
+      if (pid2.value.length < 10) {
+        this.openDial();
+      }
+
+      if (messages.length > 0) {
+        e.preventDefault();
+        errorElement.innerText = messages.join(', ');
+      }
+    });
+
     $(document).ready(function () {
       var currentGfgStep, nextGfgStep, prevGfgStep;
       var opacity;
@@ -51,19 +127,18 @@ export class HeaderComponent implements AfterViewInit {
         nextGfgStep = currentGfgStep.next();
         prevGfgStep = currentGfgStep.prev();
 
-
         $('#progressbar li')
           .eq($('fieldset').index(nextGfgStep))
-          .addClass('active')
+          .addClass('active');
 
-          // .eq($('fieldset').index(prevGfgStep))
-          // .removeClass('active');
-        
+        // .eq($('fieldset').index(prevGfgStep))
+        // .removeClass('active');
+
         $('#progressbar li')
           .eq($('fieldset').index(currentGfgStep))
           .removeClass('active')
           .addClass('prev');
-        
+
         // console.log($('fieldset').index(currentGfgStep));
 
         if ($('fieldset').index(currentGfgStep) != 0) {
@@ -71,11 +146,6 @@ export class HeaderComponent implements AfterViewInit {
             .eq($('fieldset').index(prevGfgStep))
             .addClass('prev');
         }
-          
-          
-          
-        
-          
 
         nextGfgStep.show();
         currentGfgStep.animate(
@@ -99,11 +169,9 @@ export class HeaderComponent implements AfterViewInit {
         setProgressBar(++current);
       });
 
-      
-
       function setProgressBar(currentStep) {
         var percent = (100 / steps) * current;
-        // percent = percent.toFixed();
+        // var percent2 = percent.toFixed();
         $('.progress-bar').css('width', percent + '%');
       }
 
@@ -113,6 +181,9 @@ export class HeaderComponent implements AfterViewInit {
     });
   }
 }
+
+
+
 export interface PeriodicElement {
   tid: string;
   pid: string;
@@ -122,27 +193,24 @@ export interface PeriodicElement {
 
 const batteryLevel = document.querySelector('.battery-level');
 
- 
-
 const ELEMENT_DATA: PeriodicElement[] = [
-  { pid: 'PAT001ABC2021', tid: 'TEST001ABC2021', date: '2021-01-06 14.25.34', report: 'Failed' },
-  // { pid: 2, tid: 'Helium', date: 4.0026, report: 'He' },
-  // { pid: 3, tid: 'Lithium', date: 6.941, report: 'Li' },
-  // { pid: 4, tid: 'Beryllium', date: 9.0122, report: 'Be' },
-  // { pid: 5, tid: 'Boron', date: 10.811, report: 'B' },
-  // { pid: 6, tid: 'Carbon', date: 12.0107, report: 'C' },
-  // { pid: 7, tid: 'Nitrogen', date: 14.0067, report: 'N' },
-  // { pid: 8, tid: 'Oxygen', date: 15.9994, report: 'O' },
-  // { pid: 9, tid: 'Fluorine', date: 18.9984, report: 'F' },
-  // { pid: 10, tid: 'Neon', date: 20.1797, report: 'Ne' },
-  // { pid: 11, tid: 'Sodium', date: 22.9897, report: 'Na' },
-  // { pid: 12, tid: 'Magnesium', date: 24.305, report: 'Mg' },
-  // { pid: 13, tid: 'Aluminum', date: 26.9815, report: 'Al' },
-  // { pid: 14, tid: 'Silicon', date: 28.0855, report: 'Si' },
-  // { pid: 15, tid: 'Phosphorus', date: 30.9738, report: 'P' },
-  // { pid: 16, tid: 'Sulfur', date: 32.065, report: 'S' },
-  // { pid: 17, tid: 'Chlorine', date: 35.453, report: 'Cl' },
-  // { pid: 18, tid: 'Argon', date: 39.948, report: 'Ar' },
-  // { pid: 19, tid: 'Potassium', date: 39.0983, report: 'K' },
-  // { pid: 20, tid: 'Calcium', date: 40.078, report: 'Ca' },
+  {
+    pid: 'PAT001ABC2021',
+    tid: 'TEST001ABC2021',
+    date: '2021-01-06 14.25.34',
+    report: 'Failed',
+  },
+  {
+    pid: 'PAT001ABC2021',
+    tid: 'TEST001ABC2021',
+    date: '2021-01-06 14.25.34',
+    report: 'Failed',
+  },
+  {
+    pid: 'PAT001ABC2021',
+    tid: 'TEST001ABC2021',
+    date: '2021-01-06 14.25.34',
+    report: 'Failed',
+  },
+  
 ];
